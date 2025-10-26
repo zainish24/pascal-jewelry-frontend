@@ -1,0 +1,816 @@
+    :root {
+      --olive-green: #556b2f;
+      --smoke-white: #f5f5f5;
+      --bg-white: #fff;
+      --hover: #2e3a1a;
+      --box-shadow: #4b4b4b;
+      --strong-color: #666666;
+      --second-strong-color: #999;
+      --third-strong-color: #333;
+      --bg-dark: #212529;
+      --rating: #ccc;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background-color: var(--smoke-white);
+    }
+
+    hr {
+      border: 1px solid var(--olive-green);
+      width: 100%;
+    }
+
+
+    /*//////////////////////////////////////////////////////////// NAVBAR CSS //////////////////////////////////////////////////////////////////////*/
+    .navbar-brand,
+    .nav-link {
+      color: var(--bg-white) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover {
+      color: var(--olive-green) !important;
+    }
+
+    .navbar-brand img {
+      height: 45px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .navbar-toggler {
+      border-color: var(--bg-white);
+      color: var(--bg-white);
+      background-color: var(--bg-white);
+    }
+
+    .hero {
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
+    }
+
+    .hero .carousel,
+    .hero .carousel-inner,
+    .hero .carousel-item {
+      height: 100%;
+    }
+
+    .hero .carousel-item img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      filter: brightness(60%);
+    }
+
+    .carousel-caption {
+      bottom: 20%;
+      z-index: 2;
+    }
+
+    .carousel-caption h5 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--bg-white);
+    }
+
+    .services .card {
+      border: none;
+      border-radius: 1rem;
+      transition: transform .2s;
+    }
+
+    .services .card:hover {
+      transform: translateY(-8px);
+      transition: 0.3s;
+      cursor: pointer;
+      background-color: var(--olive-green);
+      color: var(--bg-white);
+    }
+
+    @media (max-width: 425px) {
+      .carousel-caption h5 {
+        font-size: 50px;
+      }
+
+      .carousel-caption p {
+        font-size: 30px;
+        margin: 0 auto;
+      }
+    }
+
+
+
+
+
+    /*//////////////////////////////////////////////////////////// LOADER CSS //////////////////////////////////////////////////////////////*/
+    #loader {
+      position: fixed;
+      inset: 0;
+      background-color: var(--olive-green);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease, visibility 0s 0.5s;
+    }
+
+    .spinner-border {
+      width: 5rem;
+      height: 5rem;
+      border-width: 0.6em;
+    }
+
+
+
+
+    /*//////////////////////////////////////////////////////////// About CSS //////////////////////////////////////////////////////////////*/
+    .about-header {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-white);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    strong {
+      color: var(--strong-color);
+    }
+
+    .about-header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+    }
+
+    .about-section h2 {
+      font-weight: 700;
+      color: var(--olive-green);
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .team-section {
+      padding: 40px 20px;
+      background-color: var(--bg-white);
+      box-shadow: 0 4px 10px var(--box-shadow);
+    }
+
+    .team-member h4 {
+      margin-bottom: 5px;
+      font-weight: lighter;
+    }
+
+    .team-member p {
+      color: var(--second-strong-color);
+      font-size: 1rem;
+    }
+
+    .team-member {
+      background: var(--box-shadow);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0px 2px 6px var(--box-shadow);
+      transition: 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      background: var(--olive-green);
+      color: var(--bg-white);
+      cursor: pointer;
+    }
+
+    .team-section {
+      background-color: var(--strong-color);
+      color: var(--bg-white);
+    }
+
+    /*//////////////////////////////////////////////////////////// FOOTER CSS //////////////////////////////////////////////////////////////////////*/
+    .footer-column {
+      transform: translateY(20px);
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--bg-white);
+    }
+
+    .footer-link-list a {
+      color: var(--bg-white);
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .footer-link-list a:hover {
+      color: var(--olive-green);
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-icons a {
+      color: var(--olive-green);
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+
+    .social-icons a:hover {
+      color: var(--hover);
+      transition: color 0.3s, transform 0.3s;
+
+    }
+
+    .footer-section-title {
+      color: var(--bg-white);
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .footer-bottom {
+      border-top: 5px solid var(--olive-green);
+      border-radius: 20px;
+      padding-top: 25px;
+      margin-top: 40px;
+      padding-bottom: 50px;
+      color: var(--bg-white);
+    }
+
+    /*//////////////////////////////////////////////////////////// FEEDBACK CSS //////////////////////////////////////////////////////////////////////*/
+    .feedback-section {
+      padding: 60px 0;
+    }
+
+    .feedback-card {
+      background: var(--bg-white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 35px var(--box-shadow);
+      animation: fadeInUp 1s ease;
+    }
+
+    .feedback-card h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--olive-green);
+    }
+
+    .form-control {
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--hover-color);
+      box-shadow: 0 0 8px var(--box-shadow);
+    }
+
+    .btn-submit {
+      background: var(--olive-green);
+      border: none;
+      color: var(--bg-white);
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: var(--bg-white);
+      color: var(--olive-green);
+      border: 1px solid var(--olive-green);
+    }
+
+    .rating i {
+      font-size: 1.5rem;
+      color: var(--rating);
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.2s;
+    }
+
+    .rating i:hover,
+    .rating i.active {
+      color: var(--olive-green);
+      transform: scale(1.2);
+    }
+
+    .feedback-img {
+      max-width: 100%;
+      border-radius: 30px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .testimonials-section {
+      background: var(--smoke-white);
+      padding: 70px 0;
+    }
+
+    .testimonials-section h2 {
+      color: var(--olive-green);
+    }
+
+    .testimonial-card {
+      background: var(--bg-white);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px var(--box-shadow);
+      max-width: 600px;
+    }
+
+    .testimonial-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--olive-green);
+      margin-bottom: 20px;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      color: var(--strong-color);
+      font-style: italic;
+    }
+
+    .testimonial-name {
+      margin-top: 15px;
+      font-weight: 600;
+      color: var(--olive-green);
+    }
+
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: var(--olive-green);
+      border-radius: 50%;
+      padding: 20px;
+    }
+
+    .carousel-item {
+      transition: transform 1s ease, opacity 1s ease-in-out;
+    }
+
+    .contact-shortcut {
+      background: linear-gradient(180deg, var(--olive-green), var(--hover));
+      color: var(--bg-white);
+      padding: 70px 0;
+    }
+
+    .contact-shortcut h3 {
+      font-size: 2rem;
+    }
+
+    .contact-shortcut a {
+      transition: all 0.3s ease;
+    }
+
+    .contact-shortcut a:hover {
+      background: var(--olive-green) !important;
+      color: var(--bg-white) !important;
+    }
+
+    .btn-olive {
+      background-color: var(--olive-green);
+      color: var(--bg-white);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-olive:hover {
+      background-color: var(--hover);
+      color: var(--bg-white);
+    }
+
+    .contact-section {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+
+    .contact-section h2 {
+      color: var(--olive-green);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control:focus {
+      border-color: var(--olive-green);
+      box-shadow: 0 0 0 .25rem rgba(85, 107, 47, 0.2);
+    }
+
+    .btn-olive {
+      background-color: var(--olive-green);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+    }
+
+    .btn-olive:hover {
+      background-color: #445526;
+    }
+
+    .info-box p:hover {
+      color: var(--olive-green);
+    }
+
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border: 0;
+    }
+
+    .badge-hours {
+      background-color: var(--rating);
+      color: var(--olive-green);
+      font-weight: 500;
+    }
+
+
+
+
+
+    /*//////////////////////////////////////////////////////////// SUB PAGES INFO CSS //////////////////////////////////////////////////////////////////////*/
+    .more-info.about-info {
+      background: #f9f9f9;
+      padding: 80px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .more-info-content {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .more-info .right-content span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #556b2f;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .more-info .right-content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .more-info .right-content h2 em {
+      color: #556b2f;
+      font-style: normal;
+    }
+
+    .more-info .right-content h3 {
+      margin-top: 25px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #333;
+      border-left: 4px solid #556b2f;
+      padding-left: 10px;
+    }
+
+    .more-info .right-content p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .more-info .left-image img {
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .more-info-content {
+        text-align: center;
+      }
+
+      .more-info .right-content {
+        margin-bottom: 30px;
+      }
+    }
+
+    /*//////////////////////////////////////////////////////////// SUB PAGES DESCRIPTION CSS //////////////////////////////////////////////////////////////////////*/
+    .des-info {
+      background: grey;
+      padding: 100px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin-top: 30px;
+    }
+
+    .overview-content {
+      background: #555;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .text-content {
+      margin-bottom: 30px;
+    }
+
+
+    .text-content h3 {
+      margin-top: 25px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .text-content p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .image-gallery-section {
+      background-color: #222;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+      border-radius: 12px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 991px) {
+      .overview-content {
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .text-content h3 {
+        font-size: 20px;
+      }
+
+      .text-content p {
+        font-size: 15px;
+      }
+    }
+
+
+    /*//////////////////////////////////////////////////////////// FEEDBACK CSS //////////////////////////////////////////////////////////////////////*/
+    /* Bangles */
+    .page-heading-bangles {
+      text-align: center;
+      background-image: url(/images/items/bangles-banner.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 230px 0px 150px 0px;
+      color: var(--bg-white);
+    }
+
+    .page-heading-bangles h1 {
+      text-transform: capitalize;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 5px solid var(--olive-green);
+      border-width: auto;
+    }
+
+    .page-heading-bangles span {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--bg-white);
+      display: block;
+    }
+
+
+    /* Watches */
+    .page-heading-watch {
+      text-align: center;
+      background-image: url(/images/items/Watches/watch-banner.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 230px 0px 150px 0px;
+      color: var(--bg-white);
+    }
+
+    .page-heading-watch h1 {
+      text-transform: capitalize;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 5px solid var(--olive-green);
+      border-width: auto;
+    }
+
+    .page-heading-watch span {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--bg-white);
+      display: block;
+    }
+
+    /* Cufflinks */
+    .page-heading-cufflinks  {
+      text-align: center;
+      background-image: url(/images/items/Cufflings/cufflink-banner.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 230px 0px 150px 0px;
+      color: var(--bg-white);
+    }
+
+    .page-heading-cufflinks  h1 {
+      text-transform: capitalize;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 5px solid var(--olive-green);
+      border-width: auto;
+    }
+
+    .page-heading-cufflinks  span {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--bg-white);
+      display: block;
+    }
+
+    /* Necklace */
+    .page-heading-necklace  {
+      text-align: center;
+      background-image: url(/images/items/Necklace/necklace-banner.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 230px 0px 150px 0px;
+      color: var(--bg-white);
+    }
+
+    .page-heading-necklace  h1 {
+      text-transform: capitalize;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 5px solid var(--olive-green);
+      border-width: auto;
+    }
+
+    .page-heading-necklace  span {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--bg-white);
+      display: block;
+    }
+
+    /* Ring */
+    .page-heading-ring  {
+      text-align: center;
+      background-image: url(/images/items/Rings/ring-banner.jpeg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 230px 0px 150px 0px;
+      color: var(--bg-white);
+    }
+
+    .page-heading-ring  h1 {
+      text-transform: capitalize;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      border-bottom: 5px solid var(--olive-green);
+      border-width: auto;
+    }
+
+    .page-heading-ring  span {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--bg-white);
+      display: block;
+    }
+
+    .shifting-shortcut {
+      background: var(--olive-green);
+      color: var(--bg-white);
+      padding: 70px 0;
+    }
+
+    .shifting-shortcut h3 {
+      font-size: 2rem;
+    }
+
+    .shifting-shortcut a {
+      transition: all 0.3s ease;
+    }
+
+    .shifting-shortcut a:hover {
+      background: var(--olive-green) !important;
+      color: var(--bg-white) !important;
+    }
